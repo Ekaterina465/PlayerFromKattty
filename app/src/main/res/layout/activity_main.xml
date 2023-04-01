@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:background="#EACDFF"
+        android:gravity="center"
+        android:hint="Название мелодии"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D86EDC"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="62dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOut">
+
+        <Button
+            android:id="@+id/btnResume"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#D28EEF"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="ВОСПРОИЗВЕСТИ"
+            app:backgroundTint="@color/purple_200" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#D28EEF"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="ПАУЗА"
+            app:backgroundTint="#D28EEF" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#DBADF4"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="СТОП"
+            app:backgroundTint="#DBADF4" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#C487DA"
+            android:backgroundTint="#CD7402"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="НАЗАД"
+            app:backgroundTint="#C487DA" />
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#B470EF"
+            android:backgroundTint="#CD7402"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="ВПЕРЁД"
+            app:backgroundTint="#B470EF" />
+
+        <Switch
+            android:id="@+id/switchLoop"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#F189EF"
+            android:padding="14dp"
+            android:text="ПОВТОР"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:gravity="center"
+        android:text="ИСТОЧНИК"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <FrameLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/btnStream"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|left"
+            android:layout_marginRight="10dp"
+            android:background="#CC91E4"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClickSource"
+            android:text="Интернет"
+            android:textColor="#F6F6F6"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:backgroundTint="#CC91E4" />
+
+        <Button
+            android:id="@+id/btnRAW"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_horizontal"
+            android:background="#CC91E4"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClickSource"
+            android:text="Приложение"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:backgroundTint="#CC91E4" />
+
+    </FrameLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="281dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="663dp"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

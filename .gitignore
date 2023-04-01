@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"ഇപ്പോൾ കേൾക്കുന്നത്"</string>
+    <string msgid="7844788
+# Project exclude paths
+/.gradle/
